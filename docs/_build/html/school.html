@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>school package &mdash; School Management System 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8d563738"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="school.migrations package" href="school.migrations.html" />
+    <link rel="prev" title="manage module" href="manage.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            School Management System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">task1.4</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="core.html">core package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manage.html">manage module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">school package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="school.migrations.html">school.migrations package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-school.admin">school.admin module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-school.apps">school.apps module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#school.apps.SchoolConfig"><code class="docutils literal notranslate"><span class="pre">SchoolConfig</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-school.models">school.models module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#school.models.Course"><code class="docutils literal notranslate"><span class="pre">Course</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#school.models.Students"><code class="docutils literal notranslate"><span class="pre">Students</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#school.models.Teachers"><code class="docutils literal notranslate"><span class="pre">Teachers</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-school.serializers">school.serializers module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#school.serializers.CourseSerializers"><code class="docutils literal notranslate"><span class="pre">CourseSerializers</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#school.serializers.StudentSerializers"><code class="docutils literal notranslate"><span class="pre">StudentSerializers</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#school.serializers.TeacherSerializers"><code class="docutils literal notranslate"><span class="pre">TeacherSerializers</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-school.tests">school.tests module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-school.urls">school.urls module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-school.views">school.views module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#school.views.CourseCreateView"><code class="docutils literal notranslate"><span class="pre">CourseCreateView</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#school.views.StudentCreateView"><code class="docutils literal notranslate"><span class="pre">StudentCreateView</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#school.views.TeacherCreateView"><code class="docutils literal notranslate"><span class="pre">TeacherCreateView</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-school">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html">settings module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">School Management System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">task1.4</a></li>
+      <li class="breadcrumb-item active">school package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/school.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="school-package">
+<h1>school package<a class="headerlink" href="#school-package" title="Link to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="school.migrations.html">school.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="school.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="school.migrations.html#module-school.migrations.0001_initial">school.migrations.0001_initial module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="school.migrations.html#school.migrations.0001_initial.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="school.migrations.html#school.migrations.0001_initial.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="school.migrations.html#school.migrations.0001_initial.Migration.initial"><code class="docutils literal notranslate"><span class="pre">Migration.initial</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="school.migrations.html#school.migrations.0001_initial.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="school.migrations.html#module-school.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-school.admin">
+<span id="school-admin-module"></span><h2>school.admin module<a class="headerlink" href="#module-school.admin" title="Link to this heading"></a></h2>
+</section>
+<section id="module-school.apps">
+<span id="school-apps-module"></span><h2>school.apps module<a class="headerlink" href="#module-school.apps" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="school.apps.SchoolConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">school.apps.</span></span><span class="sig-name descname"><span class="pre">SchoolConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/school/apps.html#SchoolConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#school.apps.SchoolConfig" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.apps.SchoolConfig.default_auto_field">
+<span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#school.apps.SchoolConfig.default_auto_field" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.apps.SchoolConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'school'</span></em><a class="headerlink" href="#school.apps.SchoolConfig.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-school.models">
+<span id="school-models-module"></span><h2>school.models module<a class="headerlink" href="#module-school.models" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="school.models.Course">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">school.models.</span></span><span class="sig-name descname"><span class="pre">Course</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">course_code</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/school/models.html#Course"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#school.models.Course" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="school.models.Course.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#school.models.Course.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="school.models.Course.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#school.models.Course.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.models.Course.course_code">
+<span class="sig-name descname"><span class="pre">course_code</span></span><a class="headerlink" href="#school.models.Course.course_code" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.models.Course.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#school.models.Course.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.models.Course.name_name">
+<span class="sig-name descname"><span class="pre">name_name</span></span><a class="headerlink" href="#school.models.Course.name_name" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.models.Course.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#school.models.Course.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="school.models.Students">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">school.models.</span></span><span class="sig-name descname"><span class="pre">Students</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roll_no</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/school/models.html#Students"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#school.models.Students" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="school.models.Students.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#school.models.Students.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="school.models.Students.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#school.models.Students.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.models.Students.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#school.models.Students.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.models.Students.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#school.models.Students.name" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.models.Students.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#school.models.Students.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.models.Students.roll_no">
+<span class="sig-name descname"><span class="pre">roll_no</span></span><a class="headerlink" href="#school.models.Students.roll_no" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="school.models.Teachers">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">school.models.</span></span><span class="sig-name descname"><span class="pre">Teachers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Schedule</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/school/models.html#Teachers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#school.models.Teachers" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="school.models.Teachers.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#school.models.Teachers.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="school.models.Teachers.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#school.models.Teachers.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.models.Teachers.Schedule">
+<span class="sig-name descname"><span class="pre">Schedule</span></span><a class="headerlink" href="#school.models.Teachers.Schedule" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.models.Teachers.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#school.models.Teachers.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.models.Teachers.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#school.models.Teachers.name" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.models.Teachers.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#school.models.Teachers.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-school.serializers">
+<span id="school-serializers-module"></span><h2>school.serializers module<a class="headerlink" href="#module-school.serializers" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="school.serializers.CourseSerializers">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">school.serializers.</span></span><span class="sig-name descname"><span class="pre">CourseSerializers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/school/serializers.html#CourseSerializers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#school.serializers.CourseSerializers" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSerializer</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="school.serializers.CourseSerializers.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/school/serializers.html#CourseSerializers.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#school.serializers.CourseSerializers.Meta" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.serializers.CourseSerializers.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'__all__'</span></em><a class="headerlink" href="#school.serializers.CourseSerializers.Meta.fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.serializers.CourseSerializers.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#school.serializers.CourseSerializers.Meta.model" title="Link to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#school.models.Course" title="school.models.Course"><code class="xref py py-class docutils literal notranslate"><span class="pre">Course</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="school.serializers.StudentSerializers">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">school.serializers.</span></span><span class="sig-name descname"><span class="pre">StudentSerializers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/school/serializers.html#StudentSerializers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#school.serializers.StudentSerializers" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSerializer</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="school.serializers.StudentSerializers.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/school/serializers.html#StudentSerializers.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#school.serializers.StudentSerializers.Meta" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.serializers.StudentSerializers.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'__all__'</span></em><a class="headerlink" href="#school.serializers.StudentSerializers.Meta.fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.serializers.StudentSerializers.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#school.serializers.StudentSerializers.Meta.model" title="Link to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#school.models.Students" title="school.models.Students"><code class="xref py py-class docutils literal notranslate"><span class="pre">Students</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="school.serializers.TeacherSerializers">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">school.serializers.</span></span><span class="sig-name descname"><span class="pre">TeacherSerializers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/school/serializers.html#TeacherSerializers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#school.serializers.TeacherSerializers" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSerializer</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="school.serializers.TeacherSerializers.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/school/serializers.html#TeacherSerializers.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#school.serializers.TeacherSerializers.Meta" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.serializers.TeacherSerializers.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'__all__'</span></em><a class="headerlink" href="#school.serializers.TeacherSerializers.Meta.fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.serializers.TeacherSerializers.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#school.serializers.TeacherSerializers.Meta.model" title="Link to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#school.models.Teachers" title="school.models.Teachers"><code class="xref py py-class docutils literal notranslate"><span class="pre">Teachers</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-school.tests">
+<span id="school-tests-module"></span><h2>school.tests module<a class="headerlink" href="#module-school.tests" title="Link to this heading"></a></h2>
+</section>
+<section id="module-school.urls">
+<span id="school-urls-module"></span><h2>school.urls module<a class="headerlink" href="#module-school.urls" title="Link to this heading"></a></h2>
+</section>
+<section id="module-school.views">
+<span id="school-views-module"></span><h2>school.views module<a class="headerlink" href="#module-school.views" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="school.views.CourseCreateView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">school.views.</span></span><span class="sig-name descname"><span class="pre">CourseCreateView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/school/views.html#CourseCreateView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#school.views.CourseCreateView" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ListCreateAPIView</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.views.CourseCreateView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;QuerySet</span> <span class="pre">[]&gt;</span></em><a class="headerlink" href="#school.views.CourseCreateView.queryset" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.views.CourseCreateView.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#school.views.CourseCreateView.serializer_class" title="Link to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#school.serializers.CourseSerializers" title="school.serializers.CourseSerializers"><code class="xref py py-class docutils literal notranslate"><span class="pre">CourseSerializers</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="school.views.StudentCreateView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">school.views.</span></span><span class="sig-name descname"><span class="pre">StudentCreateView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/school/views.html#StudentCreateView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#school.views.StudentCreateView" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ListCreateAPIView</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.views.StudentCreateView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;QuerySet</span> <span class="pre">[]&gt;</span></em><a class="headerlink" href="#school.views.StudentCreateView.queryset" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.views.StudentCreateView.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#school.views.StudentCreateView.serializer_class" title="Link to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#school.serializers.StudentSerializers" title="school.serializers.StudentSerializers"><code class="xref py py-class docutils literal notranslate"><span class="pre">StudentSerializers</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="school.views.TeacherCreateView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">school.views.</span></span><span class="sig-name descname"><span class="pre">TeacherCreateView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/school/views.html#TeacherCreateView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#school.views.TeacherCreateView" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ListCreateAPIView</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.views.TeacherCreateView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;QuerySet</span> <span class="pre">[]&gt;</span></em><a class="headerlink" href="#school.views.TeacherCreateView.queryset" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="school.views.TeacherCreateView.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#school.views.TeacherCreateView.serializer_class" title="Link to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#school.serializers.TeacherSerializers" title="school.serializers.TeacherSerializers"><code class="xref py py-class docutils literal notranslate"><span class="pre">TeacherSerializers</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-school">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-school" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="manage.html" class="btn btn-neutral float-left" title="manage module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="school.migrations.html" class="btn btn-neutral float-right" title="school.migrations package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Suraj Rajbanshi.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
